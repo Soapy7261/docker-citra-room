@@ -17,7 +17,7 @@ RUN apk update \
         xz \
     && export PATH=$PATH:/bin:/usr/local/bin:/usr/bin:/sbin:/usr/lib/ninja-build/bin \
     && mkdir -p /server/lib /tmp/citra/build \
-    && wget --show-progress -q -c -O "citra-unified.tar.xz" "https://github.com/K4rian/docker-citra-room/releases/download/v0.2798/canary-unified-source-20240304-d996981.tar.xz" \
+    && wget --show-progress -q -c -O "citra-unified.tar.xz" "https://github.com/Soapy7261/docker-citra-room/releases/download/v0.2798/canary-unified-source-20240304-d996981.tar.xz" \
     && tar --strip-components=1 -xf citra-unified.tar.xz \
     && { echo "#!/bin/ash"; \
          echo "SCRIPT_DIR=\$(dirname \"\$(readlink -f \"\$0\")\")"; \
