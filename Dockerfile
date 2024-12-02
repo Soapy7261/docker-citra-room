@@ -71,7 +71,7 @@ ENV CITRA_TOKEN=""
 ENV CITRA_WEBAPIURL=""
 
 RUN apk update \
-    && adduser -D -h /home/container container
+    && adduser -D -h /home/container container \
     && rm -rf /tmp/* /var/tmp/*
 
 COPY --from=builder --chown=$USERNAME /server/ $USERHOME/
