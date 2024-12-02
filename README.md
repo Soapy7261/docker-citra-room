@@ -1,3 +1,7 @@
+# NOTICE!
+
+THIS DOCKER IMAGE IS OPTIMIZED FOR PTERODACTYL USAGE WITH MY YOLKS, IT MAY NOT WORK AS EXPECTED IN A REGULAR DOCKER ENVIRONMENT.
+
 <p align="center">
  <img alt="docker-citra-room logo" src="https://raw.githubusercontent.com/K4rian/docker-citra-room/assets/icons/logo-docker-citra-room.svg" width="25%" align="center">
 </p>

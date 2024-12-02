@@ -52,7 +52,7 @@ RUN apk update \
 
 FROM alpine:3.20
 
-ENV USERNAME=citra
+ENV USERNAME=container
 ENV USERHOME=/home/$USERNAME
 
 # Required
