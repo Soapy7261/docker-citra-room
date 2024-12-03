@@ -3,7 +3,7 @@
 #
 # Server Files: /home/citra
 
-export LD_LIBRARY_PATH=/citra/lib:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=/citra/lib:$LD_LIBRARY_PATH
 
 clear
 

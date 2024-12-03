@@ -83,7 +83,7 @@ USER $USERNAME
 WORKDIR $USERHOME
 # Pterodactyl thing i guess
 ENV USER=$USERNAME HOME=$USERHOME
-
+ENV LD_LIBRARY_PATH=/citra/lib:$LD_LIBRARY_PATH
 copy ./container_files/docker-entrypoint.sh /entrypoint.sh
 
 #Self test to make sure it at least works
