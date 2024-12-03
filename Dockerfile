@@ -87,6 +87,6 @@ ENV LD_LIBRARY_PATH=/citra/lib:$LD_LIBRARY_PATH
 copy ./container_files/docker-entrypoint.sh /entrypoint.sh
 
 #Self test to make sure it at least works
-RUN echo "q" | /citra/citra-room
+RUN /citra/citra-room --version
 
 ENTRYPOINT [ "/bin/ash", "/entrypoint.sh" ]
