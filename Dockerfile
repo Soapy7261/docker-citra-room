@@ -72,14 +72,21 @@ ENV CITRA_WEBAPIURL=""
 
 RUN apk update \
     && adduser -D -h /home/container container \
+    && mkdir /citra \
+    && chown -R container /citra \
+    && chmod -R 755 /citra \
     && rm -rf /tmp/* /var/tmp/*
 
-COPY --from=builder --chown=$USERNAME /server/ $USERHOME/
-COPY --chown=$USERNAME ./container_files/ $USERHOME/
+COPY --from=builder --chown=$USERNAME /server/ /citra/
 
 USER $USERNAME
 WORKDIR $USERHOME
+# Pterodactyl thing i guess
+ENV USER=$USERNAME HOME=$USERHOME
 
-RUN chmod +x docker-entrypoint.sh
+copy ./container_files/docker-entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["./docker-entrypoint.sh"]
+#Self test to make sure it at least works
+RUN echo "q" | /citra/citra-room
+
+ENTRYPOINT [ "/bin/ash", "/entrypoint.sh" ]

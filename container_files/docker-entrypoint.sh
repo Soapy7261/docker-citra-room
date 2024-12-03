@@ -3,12 +3,12 @@
 #
 # Server Files: /home/citra
 
-export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/citra/lib:$LD_LIBRARY_PATH
 
 clear
 
 s_command="
-$HOME/citra-room \
+/citra/citra-room \
 --port ${CITRA_PORT} \
 --room-name \"${CITRA_ROOMNAME}\" \
 --preferred-game \"${CITRA_PREFGAME}\" \
